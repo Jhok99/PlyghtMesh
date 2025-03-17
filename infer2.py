@@ -132,7 +132,7 @@ def compute_fixed_voxel_occupancy(points, grid_shape=(8, 8, 16)):
     return occupancy_flat
 
 @torch.no_grad()
-def infer(cfg, checkpoint_path, num_samples=10, pointcloud_dir="/datasets/ply_modelnet40", output_dir="pointclouds"):
+def infer(cfg, checkpoint_path, num_samples=10, pointcloud_dir="/datasets/shapenet", output_dir="pointclouds"):
     """Perform inference and save generated meshes."""
     seed_everything(cfg.experiment.seed)
 
